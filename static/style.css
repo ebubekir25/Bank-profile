@@ -1,0 +1,165 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    color: #0056b3; /* A more professional blue */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0056b3;
+    padding-bottom: 5px;
+}
+
+h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+textarea, input[type="file"], select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Important for width padding */
+    font-size: 16px;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%; /* Make button full width */
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+#loadingIndicator {
+    display: flex; /* Use flexbox for centering */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.spinner {
+    border: 6px solid #f3f3f3; /* Light grey */
+    border-top: 6px solid #007bff; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin-top: 10px; /* Space between text and spinner */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#resultsContainer {
+    margin-top: 30px;
+}
+
+#resultsOutput .preview-text {
+    background-color: #e9ecef;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 5px solid #17a2b8; /* Info color for preview */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.material-section {
+    margin-bottom: 25px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #dee2e6;
+}
+
+.material-section h4 {
+    color: #0056b3; /* Same as H1 for consistency in section titles */
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 8px;
+    font-size: 1.3em;
+}
+
+.material-section .material-content {
+    white-space: pre-wrap; /* Respect newlines and spaces from Gemini output */
+    word-wrap: break-word;
+    font-size: 1em;
+    line-height: 1.7;
+    color: #495057;
+}
+
+#resultsOutput p.error { /* Style for general error messages */
+    background-color: #f8d7da;
+    color: #721c24;
+    padding: 15px;
+    border-radius: 4px;
+    border-left: 5px solid #dc3545; /* Danger color for errors */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+}
